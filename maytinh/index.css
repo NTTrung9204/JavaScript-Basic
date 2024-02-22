@@ -1,0 +1,86 @@
+.maytinh{
+    background-color: #FFA600;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+}
+.input{
+    background-color: #fff;
+    width: 455px;
+    height: 70px;
+    display: block;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: right;
+}
+.input:hover{
+    border: 2px solid #4D90FE;
+}
+.pheptoan{
+    display: flex;
+    justify-content: space-between;
+}
+.toantu{
+    width: 100px;
+    height: 60px;
+    background-color: #ccc;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.toantu:hover{
+    border: 2px solid #4D90FE;
+}
+.main{
+    width: 455px;
+    display: flex;
+    justify-content: space-between;
+}
+.chuso{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-right: 15px;
+}
+.bang{
+    margin-left: 3px;
+    margin-top: 15px;
+    width: 100px;
+    height: auto;
+    background-color: #4D90FE;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.1s linear;
+}
+.bang:hover{
+    border: 2px solid #4D90FE;
+    background-color: #4481e3;
+}
+.so{
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.so:hover{
+    border: 2px solid #4D90FE;
+    background-color: #f4f1f1;
+}
