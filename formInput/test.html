@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+<body>
+    <div class="formInput__blur"></div>
+    <form>
+        <div class="formInput">
+            <div class="formInput__tittle">
+                <span>Tạo bài viết mới</span>
+            </div>
+            <div class="formInput__content">
+                <div class="formInput__content__item">
+                    <input class="formInput__styleInput" required="required" placeholder=" " name="title" type="text">
+                    <span class="formInput__content__placeHolder">Tiêu đề</span>
+                </div>
+                <div class="formInput__content__item">
+                    <textarea class="formInput__styleInput formInput__styleInput__text" required="required" placeholder=" " name="description"></textarea>
+                    <span class="formInput__content__placeHolder">Mô tả</span>
+                </div>
+                <div class="formInput__content__item">
+                    <input class="formInput__styleInput" required="required" placeholder=" " name="image" type="text">
+                    <span class="formInput__content__placeHolder">Ảnh</span>
+                </div>
+                <div class="formInput__content__item">
+                    <input class="formInput__styleInput" required="required" placeholder=" " name="video" type="text">
+                    <span class="formInput__content__placeHolder">Video</span>
+                </div>
+            </div>
+            <div class="formInput__button">
+                <div class="formInput__create">Đăng bài</div>
+                <div class="formInput__close">Hủy bỏ</div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
+
+<script>
+    var formInputBlur = document.getElementsByClassName("formInput__blur")[0]
+    var buttonClose = document.getElementsByClassName("formInput__close")[0]
+    var formInput = document.getElementsByClassName("formInput")[0]
+    function formInputAnimation(){
+        formInputBlur.style.display = "none"
+        formInput.style.top = "-150%"
+    }
+    buttonClose.addEventListener("click",()=>{
+        formInputAnimation()
+    })
+    formInputBlur.addEventListener("click",()=>{
+        formInputAnimation()
+    })
+</script>

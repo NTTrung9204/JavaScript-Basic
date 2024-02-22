@@ -1,0 +1,130 @@
+.formInput__blur{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.155);
+}
+
+.formInput{
+    width: 700px;
+    background-color: #624772;
+    border: 2px solid #F2726A;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    font-size: 18px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.formInput__tittle{
+    background-color: #5D3474;
+    color: white;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.formInput__tittle::after{
+    content: "";
+    height: 2px;
+    background-color: #FE7156;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.formInput__content{
+    padding: 5px 30px 80px 30px;
+    color: white;
+}
+
+.formInput__styleInput{
+    width: 100%;
+    height: 50px;
+    outline: black solid 2px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    padding: 0 20px;
+    font-size: 25px;
+    background-color: #624772;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.formInput__content__item{
+    position: relative;
+    margin: 20px 0;
+}
+
+.formInput__styleInput__text{
+    padding-top: 15px;
+    resize: vertical; 
+    height: 150px;
+}
+
+.formInput__styleInput__text + .formInput__content__placeHolder{
+    top: 20px;
+}
+
+.formInput__styleInput:valid, .formInput__styleInput:focus{
+    outline: #F2726A solid 2px;
+    border: none;
+}
+
+.formInput__styleInput:not(:placeholder-shown) + .formInput__content__placeHolder,
+.formInput__styleInput:focus + .formInput__content__placeHolder{
+    color: #F2726A;
+    top: 0;
+    left: 30;
+    background-color: #624772;
+    padding: 0 10px;
+    border-left: 2px solid #F2726A;
+    border-right: 2px solid #F2726A;
+}
+
+.formInput__content__placeHolder{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.25s;
+}
+
+
+.formInput__button{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15;
+    left: 30;
+    right: 30;
+    font-size: large;
+}
+.formInput__create{
+    background-color: chartreuse;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: black;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.formInput__close{
+    background-color: #F2726A;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.formInput__create:hover{
+    background-color: rgb(0, 255, 17);
+}
+.formInput__close:hover{
+    background-color: #ff3f32;
+}
+
