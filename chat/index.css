@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 500px;
+    min-height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.container__header{
+    position: relative;
+    padding: 15px;
+    background-color: #555555;
+}
+
+.container__header::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+}
+.container__content{
+    padding: 15px;
+}
+.container__text{
+    
+}
