@@ -1,0 +1,569 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./test.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navbar__contain">
+            <li class="navbar__contain__item">Trang chủ</li>
+            <li class="navbar__contain__item">Bài viết</li>
+            <li class="navbar__contain__item">Video</li>
+            <li class="navbar__contain__item">Giới thiệu</li>
+        </ul>
+        <ul class="navbar__contain">
+            <li class="navbar__contain__item">Đăng nhập</li>
+            <li class="navbar__contain__item">Đăng ký</li>
+        </ul>
+    </div>
+    <div class="sidebar__left">
+        <div class="sidebar__left__header">
+            <i class="fas fa-pen-nib sidebar__left__header__icon"></i>
+            <span class="">Danh mục bài viết</span>
+        </div>
+        <div class="sidebar__left__line">
+            <div class="sidebar__left__line__text">Danh mục</div>
+        </div>
+        <div class="sidebar__left__content">
+            <ul class="sidebar__left__contain">
+                <li class="sidebar__left__contain__item sidebar__left__contain__item__active">
+                    <i class="fas fa-hourglass-half"></i>
+                    Dòng thời gian
+                </li>
+                <li class="sidebar__left__contain__item">
+                    <i class="fas fa-book"></i>
+                    Mơ mộng
+                </li>
+                <li class="sidebar__left__contain__item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    Du lịch
+                </li>
+                <li class="sidebar__left__contain__item">
+                    <i class="fas fa-globe-americas"></i>
+                    Catch The World
+                </li>
+                <li class="sidebar__left__contain__item">
+                    <i class="fas fa-icons"></i>
+                    Yêu đương
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar__left__footer">
+            <div class="sidebar__left__line">
+                <div class="sidebar__left__line__text">Cài đặt</div>
+            </div>
+            <div class="sidebar__left__theme">
+                <i class="fas fa-moon"></i>
+                <span id="mode__text">Dark Mode</span>
+                <div class="sidebar__left__mode">
+                    <div id="mode" class="sidebar__left__mode__mode"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__right">
+        <div class="sidebar__right__header">
+            <i class="fas fa-fire sidebar__left__header__icon"></i>
+            <span class="">Bài viết nổi bật</span>
+        </div>
+        <div class="sidebar__left__line">
+            <div class="sidebar__left__line__text">Top list</div>
+        </div>
+        <div class="sidebar__right__content">
+            <ul class="sidebar__right__contain">
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-burn"></i>
+                    Dòng thời gian
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-burn"></i>
+                    Mơ mộng
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-burn"></i>
+                    Du lịch
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-burn"></i>
+                    Catch The World
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-burn"></i>
+                    Yêu đương
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar__right__header sidebar__right__newPost">
+            <i class="fas fa-star sidebar__left__header__icon"></i>
+            <span class="">Bài viết mới nhất</span>
+        </div>
+        <div class="sidebar__left__line">
+            <div class="sidebar__left__line__text">Top list</div>
+        </div>
+        <div class="sidebar__right__content">
+            <ul class="sidebar__right__contain">
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-lightbulb"></i>
+                    <!-- Dòng thời gian -->
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-lightbulb"></i>
+                    <!-- Mơ mộng -->
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-lightbulb"></i>
+                    <!-- Du lịch -->
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-lightbulb"></i>
+                    <!-- Catch The World -->
+                </li>
+                <li class="sidebar__right__contain__item">
+                    <i class="fas fa-lightbulb"></i>
+                    <!-- Yêu đương -->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <div class="main__post">
+        
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor 4</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor 5</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+    </div>
+
+    <div class="main__post">
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+        <div class="post">
+            <div class="post__title">
+                <div class="post__title__text">Lorem ipsum dolor</div>
+            </div>
+            <div class="post__infor">
+                <div class="post__infor__favorite">
+
+                </div>
+                <img src="./avatar.png" alt="" class="post__infor__avatar">
+                <span class="post__infor__name__date">
+                    <span class="post__infor__name">Trung Thành Nguyễn</span>
+                    <span class="post__infor__date">05/16/2023</span>
+                </span>
+            </div>
+            <div class="post__content">
+                <div class="post__content__text">
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ratione, veritatis dolorem
+                        architecto, iusto cupiditate esse ut libero perspiciatis, dolores earum possimus nemo. Est,
+                        mollitia harum autem dolorem nam eaque?
+                        Voluptatem modi suscipit ea laboriosam beatae quo quia nobis doloremque perferendis. Sint,
+                        cupiditate rerum! Ullam maxime quibusdam delectus, totam similique voluptatem itaque ea? Qui, id
+                        ea labore deleniti libero cumque?
+                        Repellat iusto excepturi ratione, culpa hic illum laborum possimus accusantium voluptatibus
+                        eaque cum magnam expedita reprehenderit recusandae dolore assumenda maiores soluta nemo
+                        voluptates corporis eius architecto! Voluptatum ea possimus iusto?
+                        Suscipit ex tenetur reprehenderit tempora accusantium consequuntur eius cumque quasi nisi eos!
+                        Ab enim, quasi dolores perferendis, in assumenda commodi totam doloribus nam expedita modi
+                        repellendus ut odit facilis neque?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta asperiores ducimus aspernatur
+                        quam ab earum nisi dolorum, ut mollitia suscipit, reprehenderit laboriosam nesciunt, accusantium
+                        maiores eos assumenda a odio laborum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quaerat corporis quas?
+                        Laborum consequuntur aperiam quas repudiandae, omnis dolores architecto sunt nesciunt eaque,
+                        reiciendis corrupti ducimus non voluptatibus sapiente consectetur!
+                    </span>
+                </div>
+                <div class="post__content__text__open">
+                    Xem thêm
+                </div>
+            </div>
+            <div class="post__image__contain">
+
+                <img src="./img1.jpg" alt="" class="post__image">
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    <!-- <div class="box"></div> -->
+    <script src="./test.js"></script>
+</body>
+
+</html>
