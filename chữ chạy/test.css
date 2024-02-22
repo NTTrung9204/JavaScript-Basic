@@ -1,0 +1,12 @@
+body{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background-color: rgb(27, 11, 43);
+    padding-top: 100px;
+}
+#text{
+    color: rgb(175, 62, 255);
+    line-height: 50px;
+}
