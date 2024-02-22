@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+<body>
+    <div id="message">
+
+    </div>
+    
+    <div class="contain">
+        <!-- Success -->
+
+
+        <button onclick="ShowSuccessToast();" class="btn btn--success">Show success toast</button>
+        <button onclick="ShowErrorToast();" class="btn btn--error">Show error toast</button>
+
+        <!-- 
+
+        <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast__content">
+                <h2>Success</h2>
+                <p>Hello, đây là Ví dụ dùng BEM tạo Toast Message UI</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="toast toast--info">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast__content">
+                <h2>Info</h2>
+                <p>Hello, đây là Ví dụ dùng BEM tạo Toast Message UI</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="toast toast--warning">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast__content">
+                <h2>Warning</h2>
+                <p>Hello, đây là Ví dụ dùng BEM tạo Toast Message UI</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast__content">
+                <h2>Error</h2>
+                <p>Hello, đây là Ví dụ dùng BEM tạo Toast Message UI</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <script>
+        function Active({
+            title = '',
+            message = '',
+            type = '',
+            duration = 3000
+        })
+        {
+            const main=document.getElementById('message');
+            if (main) {
+                const toast = document.createElement('div');
+                const icons = {
+                    success: 'fas fa-check-circle',
+                    info: 'fas fa-info-circle',
+                    warning: 'fas fa-exclamation-circle',
+                    error: 'fas fa-exclamation-circle'
+                }
+
+                const icon = icons[type];
+                const delay = (duration/1000).toFixed(2);
+                toast.classList.add('toast',`toast--${type}`);
+                toast.style.animation = `SlideInLeft ease .7s , FadeOut ease-in 1s ${delay}s forwards`;
+
+                toast.innerHTML = `
+                <div class="toast__icon">
+                    <i class="${icon}"></i>
+                </div>
+                <div class="toast__content">
+                    <h2>${title}</h2>
+                    <p>${message}</p>
+                </div>
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>
+                </div>
+                `;
+                main.append(toast)
+
+                setTimeout(function(){
+                    main.removeChild(toast);
+                }, duration + 1000);
+            }
+        }
+
+        
+
+        function ShowSuccessToast(){
+            Active({
+            title: 'Thành công',
+            message: 'Bạn đã đăng ký thành công khóa học lập trình',
+            type: 'success',
+            duration: 3000
+        });
+        }
+        function ShowErrorToast(){
+            Active({
+            title: 'Thất bại',
+            message: 'Đã có lỗi xảy ra khi đăng ký tài khoản',
+            type: 'error',
+            duration: 3000
+        });
+        }
+    </script>
+</body>
+</html>

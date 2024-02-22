@@ -1,0 +1,29 @@
+{
+  "name": "itsa-website",
+  "authors": [
+    "ashniu123 <nisheet1.sinvhal@gmail.com>",
+    "ashnehete <ashnehete@gmail.com>"
+  ],
+  "description": "ITSA webiste",
+  "main": "index.html",
+  "keywords": [
+    "website",
+    "college",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-social": "^5.1.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "font-awesome": "^4.7.0"
+  }
+}

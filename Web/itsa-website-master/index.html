@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+    <title>ITSA</title>
+
+    <link rel="shortcut icon" href="itsa-favicon.ico">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #content {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        #icon1 {
+            animation-name: ani;
+            -webkit-animation-name: ani;
+            animation-duration: 5s;
+            -webkit-animation-duration: 5s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @keyframes ani {
+            0% {
+                color: white;
+            }
+            25% {
+                color: #06829B;
+            }
+            50% {
+                color: white;
+            }
+            75% {
+                color: #06829B;
+            }
+            100% {
+                color: white;
+            }
+        }
+
+        @-webkit-keyframes ani {
+            0% {
+                color: white;
+            }
+            25% {
+                color: #06829B;
+            }
+            50% {
+                color: white;
+            }
+            75% {
+                color: #06829B;
+            }
+            100% {
+                color: white;
+            }
+        }
+
+        #div1 {
+            height: 10px;
+            animation-name: movdiv;
+        }
+
+        @keyframes movdiv {
+            0% {
+                top: 0;
+            }
+            25% {
+                top: 100px;
+            }
+            50% {
+                top: 0;
+            }
+            100% {
+                top: 100px;
+            }
+        }
+
+        footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Wrap all page content here -->
+    <header class="masthead index">
+
+    </header>
+    <!-- Begin Navbar -->
+    <nav id="nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav" id="navbarLeft">
+                    <li><a href="./core.html">Committee</a></li>
+                    <li><a href="./workshop.html">Workshop</a></li>
+                </ul>
+                <ul class="nav navbar-nav" id="navbarRight">
+                    <li><a href="./achievements.html">Achievements</a></li>
+                    <li><a href="./developers.html">Developers</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.navbar -->
+    </nav>
+    <a href="index.html">
+        <div id="ITSA"></div>
+    </a>
+    <!-- Begin Body -->
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Information Technology Student Association</h1>
+                <h3><em>For the students of IT. By the students of IT. Of the students of IT.</em></h3>
+                <p>We are a group of 5 students who try to bring the department together. We have fun and we also learn
+                    together. So come join us on this journey of life called <strong><em>ENGINEERING!!!</em></strong></p>
+            </div>
+            <div class="col-md-4">
+                <img src="img/itsa-logo-plain.png" width="100%">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-muted">Copyright &copy; <span id="currentYear"></span> ITSA, Sardar Patel Institute
+                        of Technology</p>
+                </div>
+                <div class="col-xs-12">
+                    <div><span class="text-muted">Follow us at:</span>
+                        <a href="https://www.facebook.com/groups/591598247557131/" target="_blank"><span class="btn btn-social-icon btn-facebook"><i
+                                    class="fa fa-facebook"></i></span></a>
+                    </div>
+                </div>
+                <div class="">
+                    <!-- Start of SimpleHitCounter Code -->
+                    <div align="right">
+                        <img src="http://simplehitcounter.com/hit.php?uid=2245548&f=255&b=16777215" border="0" height="18"
+                            width="83" alt="web counter">
+                    </div>
+                    <!-- End of SimpleHitCounter Code -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <ul class="nav pull-right scroll-top hidden-xs">
+        <li><a href="#" tabindex="-1" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+    </ul>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/indexjs.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 50) {
+                $("#nav").addClass("darkNav");
+                $('#navbarLeft').addClass('leftNavbar');
+                $('#navbarRight').addClass('rightNavbar');
+                $('#ITSA').addClass('itsa-logo');
+            } else {
+                $("#nav").removeClass("darkNav");
+                $('#navbarLeft').removeClass('leftNavbar');
+                $('#navbarRight').removeClass('rightNavbar');
+                $('#ITSA').removeClass('itsa-logo');
+            }
+        });
+    </script>
+</body>
+
+</html>

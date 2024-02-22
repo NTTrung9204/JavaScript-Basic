@@ -1,0 +1,6 @@
+#IDE files
+.idea/
+
+#exclude bower components
+
+bower_components/
