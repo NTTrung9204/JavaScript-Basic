@@ -1,0 +1,76 @@
+body{
+    background-color: #ccc;
+}
+
+.button{
+    position: absolute;
+    background-color: rgb(32, 219, 79);
+    padding: 10px;
+    border-radius: 20px;
+    left: 50%;
+    top: 50%;
+    transition: all 0.2s linear;
+}
+
+.button:hover{
+    background-color: rgb(9, 174, 50);
+}
+
+.notice{
+    width: 350px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    border-left: 4px solid rgb(15, 119, 15);
+    border-radius: 4px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    top: 32px;
+    right: -350px;
+    transition: all 0.4s linear;
+    animation-name: example;
+    animation-duration: 3.2s;
+}
+
+.icon_check{
+    font-size: 30px;
+    color: rgb(37, 163, 37);
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mess{
+    display: inline-block;
+}
+
+.title{
+    font-weight: 600;
+    transform: translateY(8px);
+}
+
+.content{
+    padding-top: 10px;
+}
+
+.icon_close{
+    font-size: 30px;
+    color: rgb(37, 163, 37);
+    position: absolute;
+    right: 10px;
+    top: 9px;
+}
+
+@keyframes example {
+    0%   {
+        opacity: 0;
+        right: -350px;
+    }
+    50%  {
+        opacity: 1;
+        right: 32px;
+    }
+    100% {
+        opacity: 0;
+        right: -350px;
+    }
+}
