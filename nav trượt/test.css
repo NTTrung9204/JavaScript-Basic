@@ -1,0 +1,55 @@
+.nav{
+    margin-top: 200px;
+    margin-left: 10px;
+    padding: 10px 25px;
+    background-color: rgb(33, 33, 65);
+    display: inline-block;
+    border-radius: 30px;
+    position: relative;
+}
+
+.nav__item{
+    display: inline-block;
+    text-align: center;
+    transition: all  0.2s linear;
+    margin: 0px 10px;
+    box-sizing: border-box;
+    width: 70px;
+    height: 50px;
+}
+
+.icon{
+    display: block;
+    color: white;
+    margin: auto auto;
+    font-size: 25px;
+    transform: translateY(10px);
+}
+
+.active{
+    transform: translateY(-40px);
+    border-radius: 100%;
+}
+
+.activeText{
+    position: absolute;
+    width: 70px;
+    font-size: 17px;
+    transform: translate(-50%,30px);
+    display: inline !important;
+}
+
+.circle{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color: rgb(33, 33, 65);
+    border-radius: 100%;
+    transform: translate(10px,-45px);
+}
+
+.text{
+    color: rgb(0, 255, 98);
+    display: none;
+}
