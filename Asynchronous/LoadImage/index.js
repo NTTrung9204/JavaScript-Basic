@@ -56,12 +56,14 @@ for(let i = 0; i < 100; i++){
 //     })
 
 const AyncFun = async ()=>{
-    for(let i = 0; i < 100; i++){
+    for(let i = 0; i < 16; i++){
         const data = await listPromise[i]
         var newImage = document.createElement("img")
         newImage.setAttribute("src", data.responseURL)
         document.body.appendChild(newImage)
     }
+    document.getElementsByClassName("one")[0].style.display = "none"
+    document.getElementById("Message").innerText = "Load image successfully"
 }
 
 AyncFun()

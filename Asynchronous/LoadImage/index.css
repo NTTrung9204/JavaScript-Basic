@@ -1,0 +1,58 @@
+:root {
+    --border-width: 7px;
+}
+
+
+.sec-loading {
+    height: 130px;
+    width: 130px;
+    display: block;
+    position: relative;
+    top: 20;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec-loading .one {
+    height: 80px;
+    width: 80px;
+    border: var(--border-width) solid rgb(255, 0, 0);
+    transform: rotate(45deg);
+    border-radius: 0 50% 50% 50%;
+    position: relative;
+    animation: move 0.5s linear infinite alternate-reverse;
+}
+
+.sec-loading .one::before {
+    content: "";
+    position: absolute;
+    height: 55%;
+    width: 55%;
+    border-radius: 50%;
+    border: var(--border-width) solid transparent;
+    border-top-color: rgb(255, 0, 0);
+    border-bottom-color: rgb(255, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes move {
+    to {
+        transform: translateY(15px) rotate(45deg);
+    }
+}
+
+#Message{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 20px;
+    color: green;
+}
