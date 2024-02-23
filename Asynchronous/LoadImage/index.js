@@ -1,10 +1,10 @@
 const theUrl = 'https://picsum.photos/200/300'
 
-function getAIPHttp(theUrl, resolve, index){
+function getAIPHttp(theUrl, resolve) {
     var xmlHttp = new XMLHttpRequest()
-    xmlHttp.onreadystatechange = function(){
-        if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-            resolve(xmlHttp, index + 1)
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            resolve(xmlHttp)
         }
     }
     xmlHttp.open("GET", theUrl, true)
@@ -28,14 +28,7 @@ function getAIPHttp(theUrl, resolve, index){
 //     getAIPHttp(theUrl, resolve, reject)
 // })
 
-var listPromise = []
 
-for(let i = 0; i < 100; i++){
-    const myPromise = new Promise((resolve, reject) => {
-        getAIPHttp(theUrl, resolve, reject)
-    })
-    listPromise.push(myPromise)
-}
 
 // listPromise[0]
 //     .then((data, index)=>{
@@ -55,16 +48,42 @@ for(let i = 0; i < 100; i++){
 //         console.log(err)
 //     })
 
-const AyncFun = async ()=>{
-    for(let i = 0; i < 16; i++){
+const AyncFun = async (inner) => {
+    document.getElementsByClassName("sec-loading")[0].style.display = "block"
+    var listPromise = []
+
+    for (let i = 0; i < inner; i++) {
+        const myPromise = new Promise((resolve, reject) => {
+            getAIPHttp(theUrl, resolve, reject)
+        })
+        listPromise.push(myPromise)
+    }
+    for (let i = 0; i < inner; i++) {
         const data = await listPromise[i]
         var newImage = document.createElement("img")
         newImage.setAttribute("src", data.responseURL)
         document.body.appendChild(newImage)
     }
-    document.getElementsByClassName("one")[0].style.display = "none"
-    document.getElementById("Message").innerText = "Load image successfully"
+    document.getElementsByClassName("sec-loading")[0].style.display = "none"
+    // document.getElementById("Message").innerText = "Load image successfully"
+    isActionExecuted = false
 }
 
-AyncFun()
+AyncFun(20)
 
+function isScrollToBottom() {
+    var windowHeight = window.innerHeight
+    var documentHeight = document.body.offsetHeight
+    var currentPosition = window.scrollY || document.documentElement.scrollTop
+
+    return currentPosition + windowHeight >= documentHeight
+}
+
+var isActionExecuted = false;
+
+document.addEventListener("scroll", () => {
+    if (!isActionExecuted && isScrollToBottom()) {
+        isActionExecuted = true
+        AyncFun(10)
+    }
+})
