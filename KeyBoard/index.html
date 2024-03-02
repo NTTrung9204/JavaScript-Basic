@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Key</title>
     <link rel="stylesheet" href="index.css">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 
 <body>
@@ -22,11 +25,177 @@
             <button class="modal__close">Done</button>
         </div>
         <div class="SnapText">
-            
+
         </div>
         <div id="app"></div>
+        <div class="keyboard-phong"></div>
+        <button class="reset">Reset</button>
     </div>
     <script src="./index.js"></script>
+    <script type="text/babel">
+
+        var contentItem = document.getElementsByClassName('content__item');
+        var contentItemBackground1 = document.getElementsByClassName('content__item-background-1');
+        var contentItemBackground2 = document.getElementsByClassName('content__item-background-2');
+        var contentItemBackground3 = document.getElementsByClassName('content__item-background-3');
+        var contentItemBackground4 = document.getElementsByClassName('content__item-background-4');
+        var contentItemBackground5 = document.getElementsByClassName('content__item-background-5');
+        var contentItemBackground6 = document.getElementsByClassName('content__item-background-6');
+
+        const { useState } = React;
+
+        function PostContentItem(prop) {
+            return (
+                <div className={`content__item ${prop.sizeKeyPCI}`}>
+                    <div className="content__item-background-1"></div>
+                    <div className={`content__item-background-2 ${prop.classKeyPCI}`}>{prop.textKeyPCI}</div>
+                    <div className="content__item-background-3"></div>
+                    <div className="content__item-background-4"></div>
+                    <div className="content__item-background-5"></div>
+                    <div className="content__item-background-6"></div>
+                </div>
+            )
+        }
+
+        function PostContent(props) {
+            return (
+                <div className="content">
+                    {props.post.map((prop) => {
+                        return (
+                            <PostContentItem
+                                classKeyPCI={prop.classKey}
+                                textKeyPCI={prop.textKey}
+                                sizeKeyPCI={prop.sizeKey}
+                            />
+                        )
+                    })}
+                </div>
+            )
+        }
+
+        function RenderUI() {
+
+            const sourse = ["background-intern", "background-fresher", "background-middle", "background-junior", "background-senior"];
+
+            const [count, setCount] = useState(2);
+
+            function intern() {
+                setCount(() => 0);
+            }
+
+            function fresher() {
+                setCount(() => 1);
+            }
+
+            function middle() {
+                setCount(() => 2);
+            }
+
+            function junior() {
+                setCount(() => 3);
+            }
+
+            function senior() {
+                setCount(() => 4);
+            }
+
+            return (
+                <React.Fragment>
+                    <div className={`content-key ${sourse[count]}`}>
+                        <PostContent
+                            post={[
+                                { sizeKey: "", classKey: "", textKey: "~" },
+                                { sizeKey: "", classKey: "", textKey: "1" },
+                                { sizeKey: "", classKey: "", textKey: "2" },
+                                { sizeKey: "", classKey: "", textKey: "3" },
+                                { sizeKey: "", classKey: "", textKey: "4" },
+                                { sizeKey: "", classKey: "", textKey: "5" },
+                                { sizeKey: "", classKey: "", textKey: "6" },
+                                { sizeKey: "", classKey: "", textKey: "7" },
+                                { sizeKey: "", classKey: "", textKey: "8" },
+                                { sizeKey: "", classKey: "", textKey: "9" },
+                                { sizeKey: "", classKey: "", textKey: "0" },
+                                { sizeKey: "", classKey: "", textKey: "-" },
+                                { sizeKey: "", classKey: "", textKey: "=" },
+                                { sizeKey: "multiplicate2", classKey: "Backspace", textKey: "<- Back" },
+                                { sizeKey: "", classKey: "", textKey: "`" }
+                            ]}
+                        />
+                        <PostContent
+                            post={[
+                                { sizeKey: "multiplicate1.5", classKey: "", textKey: "Tab" },
+                                { sizeKey: "", classKey: "", textKey: "Q" },
+                                { sizeKey: "", classKey: "", textKey: "W" },
+                                { sizeKey: "", classKey: "", textKey: "E" },
+                                { sizeKey: "", classKey: "", textKey: "R" },
+                                { sizeKey: "", classKey: "", textKey: "T" },
+                                { sizeKey: "", classKey: "", textKey: "Y" },
+                                { sizeKey: "", classKey: "", textKey: "U" },
+                                { sizeKey: "", classKey: "", textKey: "I" },
+                                { sizeKey: "", classKey: "", textKey: "O" },
+                                { sizeKey: "", classKey: "", textKey: "P" },
+                                { sizeKey: "", classKey: "", textKey: `[` },
+                                { sizeKey: "", classKey: "", textKey: `]` },
+                                { sizeKey: "multiplicate1.5", classKey: "", textKey: `\\` },
+                                { sizeKey: "", classKey: "", textKey: "`" }
+                            ]}
+                        />
+                        <PostContent
+                            post={[
+                                { sizeKey: "multiplicate2", classKey: "CapsLock", textKey: "CapsLock" },
+                                { sizeKey: "", classKey: "", textKey: "A" },
+                                { sizeKey: "", classKey: "", textKey: "S" },
+                                { sizeKey: "", classKey: "", textKey: "D" },
+                                { sizeKey: "", classKey: "", textKey: "F" },
+                                { sizeKey: "", classKey: "", textKey: "G" },
+                                { sizeKey: "", classKey: "", textKey: "H" },
+                                { sizeKey: "", classKey: "", textKey: "J" },
+                                { sizeKey: "", classKey: "", textKey: "K" },
+                                { sizeKey: "", classKey: "", textKey: "L" },
+                                { sizeKey: "", classKey: "", textKey: ";" },
+                                { sizeKey: "", classKey: "", textKey: "'" },
+                                { sizeKey: "multiplicate3", classKey: "Enter", textKey: "Enter" },
+                                { sizeKey: "", classKey: "", textKey: "" }
+                            ]}
+                        />
+                        <PostContent
+                            post={[
+                                { sizeKey: "multiplicate2.5", classKey: "ShiftLeft", textKey: "Shift" },
+                                { sizeKey: "", classKey: "", textKey: "Z" },
+                                { sizeKey: "", classKey: "", textKey: "X" },
+                                { sizeKey: "", classKey: "", textKey: "C" },
+                                { sizeKey: "", classKey: "", textKey: "V" },
+                                { sizeKey: "", classKey: "", textKey: "B" },
+                                { sizeKey: "", classKey: "", textKey: "N" },
+                                { sizeKey: "", classKey: "", textKey: "M" },
+                                { sizeKey: "", classKey: "", textKey: "," },
+                                { sizeKey: "", classKey: "", textKey: "." },
+                                { sizeKey: "", classKey: "", textKey: "/" },
+                                { sizeKey: "multiplicate2.5", classKey: "ShiftRight", textKey: "Shift" },
+                                { sizeKey: "", classKey: "ArrowUp", textKey: "Up" },
+                                { sizeKey: "", classKey: "", textKey: "" }
+                            ]}
+                        />
+                        <PostContent
+                            post={[
+                                { sizeKey: "multiplicate1.5", classKey: "ControlLeft", textKey: "Ctrl" },
+                                { sizeKey: "multiplicate1.5", classKey: "", textKey: "Win" },
+                                { sizeKey: "multiplicate1.5", classKey: "", textKey: "Alt" },
+                                { sizeKey: "multiplicate8", classKey: "space", textKey: "-" },
+                                { sizeKey: "", classKey: "", textKey: "" },
+                                { sizeKey: "", classKey: "", textKey: "" },
+                                { sizeKey: "", classKey: "ControlRight", textKey: "Ctrl" },
+                                { sizeKey: "", classKey: "ArrowLeft", textKey: "left" },
+                                { sizeKey: "", classKey: "ArrowDown", textKey: "down" },
+                                { sizeKey: "", classKey: "ArrowRight", textKey: "right" }
+                            ]}
+                        />
+                    </div>
+                </React.Fragment>
+            )
+        }
+        ReactDOM.render(<RenderUI />, document.querySelector('.keyboard-phong'));
+    </script>
 </body>
 
 </html>

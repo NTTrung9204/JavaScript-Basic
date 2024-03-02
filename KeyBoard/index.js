@@ -224,3 +224,240 @@ async function appendMessage() {
 }
 
 loadData()
+
+var contentItem = document.getElementsByClassName('content__item');
+var contentItemBackground1 = document.getElementsByClassName('content__item-background-1');
+var contentItemBackground2 = document.getElementsByClassName('content__item-background-2');
+var contentItemBackground3 = document.getElementsByClassName('content__item-background-3');
+var contentItemBackground4 = document.getElementsByClassName('content__item-background-4');
+var contentItemBackground5 = document.getElementsByClassName('content__item-background-5');
+var contentItemBackground6 = document.getElementsByClassName('content__item-background-6');
+
+let bottomWidthBackground = 35;
+let topHeightBackground = 25;
+let leftrightWidthBackforund = 8;
+let bottomHeightBackground = 30;
+let skewLeftRight = Math.atan(bottomHeightBackground/(leftrightWidthBackforund)) * (180 / Math.PI);
+
+
+function styleKey(i){
+        let btWB = bottomWidthBackground;
+        let tHB = topHeightBackground;
+        let lrWB = leftrightWidthBackforund;
+        let btHB = bottomHeightBackground;
+        let slr = skewLeftRight;
+
+        let j = 1;
+        if(contentItem[i].classList.contains('multiplicate2')){
+            btWB = btWB * 2;
+        }
+        if(contentItem[i].classList.contains('multiplicate1.5')){
+            btWB = btWB * 1.5;
+        }
+        if(contentItem[i].classList.contains('multiplicate1.25')){
+            btWB = btWB * 1.25;
+        }
+        if(contentItem[i].classList.contains('multiplicate2.5')){
+            btWB = btWB * 2.5;
+        }
+        if(contentItem[i].classList.contains('multiplicate3')){
+            btWB = btWB * 3;
+        }
+        if(contentItem[i].classList.contains('multiplicate8')){
+            btWB = btWB * 8;
+        }
+        
+        contentItem[i].style.width = `${btWB + lrWB * 2}px`;
+        contentItem[i].style.height = `${tHB + btHB}px`;
+
+        contentItemBackground1[i].style.width = `${btWB}px`;
+        contentItemBackground1[i].style.height = `${btHB}px`;
+        contentItemBackground2[i].style.width = `${btWB}px`;
+        contentItemBackground2[i].style.height = `${tHB}px`;
+        contentItemBackground2[i].style.justifyContent = 'center';
+        contentItemBackground3[i].style.borderLeftWidth = `${lrWB}px`;
+        contentItemBackground3[i].style.borderBottomWidth = `${btHB}px`;
+        contentItemBackground4[i].style.borderRightWidth = `${lrWB}px`;
+        contentItemBackground4[i].style.borderBottomWidth = `${btHB}px`;
+
+        contentItemBackground5[i].style.width = `${lrWB}px`;
+        contentItemBackground5[i].style.height = `${tHB}px`;
+        contentItemBackground6[i].style.width = `${lrWB}px`;
+        contentItemBackground6[i].style.height = `${tHB}px`;
+
+        contentItemBackground5[i].style.transform = `skewy(-${slr}deg)`;
+        contentItemBackground6[i].style.transform = `skewy(${slr}deg)`;
+
+        contentItemBackground2[i].style.transform = `translatey(-${tHB}px)`;
+        contentItemBackground3[i].style.transform = `translatex(-${lrWB}px)`;
+        contentItemBackground4[i].style.transform = `translatex(${btWB}px)`;
+        contentItemBackground5[i].style.top = `-${tHB - Math.tan(slr * Math.PI / 180) * (lrWB / 2)}px`;
+        contentItemBackground5[i].style.left = `-${lrWB}px`;
+        contentItemBackground6[i].style.top = `-${tHB - Math.tan(slr * Math.PI / 180) * (lrWB / 2)}px`;
+        contentItemBackground6[i].style.left = `${btWB}px`;
+}
+
+
+
+document.addEventListener('DOMContentLoaded',() => {
+    setTimeout(()=>{
+        for(let i = 0; i < contentItem.length; ++i){
+
+            if(i >= 15 && i < 30){
+                contentItem[i].style.transform = `translatey(-${bottomHeightBackground/2}px)`;
+            }
+            if(i >= 30 && i < 44){
+                contentItem[i].style.transform = `translatey(-${bottomHeightBackground}px)`;
+            }
+            if(i >= 44 && i < 58){
+                contentItem[i].style.transform = `translatey(-${bottomHeightBackground * 3/2}px)`;
+            }
+            if(i >= 58 && i < 100){
+                contentItem[i].style.transform = `translatey(-${bottomHeightBackground *2}px)`;
+            }
+        
+            styleKey(i);
+        }
+    },0);
+});
+
+function funcKeyUp(i){
+    let down = 6;
+    if(i >= 0 && i < 15){
+        contentItemBackground2[i].style.backgroundColor = '#d2cdcd';
+        contentItem[i].style.transform = `translatey(${down}px)`;
+    }
+    if(i >= 15 && i < 30){
+        contentItemBackground2[i].style.backgroundColor = '#d2cdcd';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground/2 - down}px)`;
+    }
+    if(i >= 30 && i < 44){
+        contentItemBackground2[i].style.backgroundColor = '#d2cdcd';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground - down}px)`;
+    }
+    if(i >= 44 && i < 58){
+        contentItemBackground2[i].style.backgroundColor = '#d2cdcd';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground * 3/2 - down}px)`;
+    }
+    if(i >= 58 && i < 100){
+        contentItemBackground2[i].style.backgroundColor = '#d2cdcd';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground *2 - down}px)`;
+    }
+}
+
+function funcKeyDown(i){
+    if(i >= 0 && i < 15){
+        contentItemBackground2[i].style.backgroundColor = 'rgb(228, 225, 225)';
+        contentItem[i].style.transform = `translatey(${0}px)`;
+    }
+    if(i >= 15 && i < 30){
+        contentItemBackground2[i].style.backgroundColor = 'rgb(228, 225, 225)';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground/2}px)`;
+    }
+    if(i >= 30 && i < 44){
+        contentItemBackground2[i].style.backgroundColor = 'rgb(228, 225, 225)';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground}px)`;
+    }
+    if(i >= 44 && i < 58){
+        contentItemBackground2[i].style.backgroundColor = 'rgb(228, 225, 225)';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground * 3/2}px)`;
+    }
+    if(i >= 58 && i < 100){
+        contentItemBackground2[i].style.backgroundColor = 'rgb(228, 225, 225)';
+        contentItem[i].style.transform = `translatey(-${bottomHeightBackground *2}px)`;
+    }
+}
+
+document.addEventListener('keydown', (event)=>{
+    console.log(event);
+    for(let i = 0; i < contentItem.length; ++i){
+        if(event.key.toUpperCase() === contentItemBackground2[i].innerHTML){
+            funcKeyUp(i);
+        }
+        if(event.code === "Space" && contentItemBackground2[i].classList.contains('space')){
+            funcKeyUp(i);
+        }
+        if(event.code === "Backspace" && contentItemBackground2[i].classList.contains('Backspace')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ShiftLeft" && contentItemBackground2[i].classList.contains('ShiftLeft')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ShiftRight" && contentItemBackground2[i].classList.contains('ShiftRight')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ControlLeft" && contentItemBackground2[i].classList.contains('ControlLeft')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ControlRight" && contentItemBackground2[i].classList.contains('ControlRight')){
+            funcKeyUp(i);
+        }
+        if(event.key === "CapsLock" && contentItemBackground2[i].classList.contains('CapsLock')){
+            funcKeyUp(i);
+        }
+        if(event.key === "Enter" && contentItemBackground2[i].classList.contains('Enter')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ArrowRight" && contentItemBackground2[i].classList.contains('ArrowRight')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ArrowUp" && contentItemBackground2[i].classList.contains('ArrowUp')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ArrowLeft" && contentItemBackground2[i].classList.contains('ArrowLeft')){
+            funcKeyUp(i);
+        }
+        if(event.code === "ArrowDown" && contentItemBackground2[i].classList.contains('ArrowDown')){
+            funcKeyUp(i);
+        }
+    }
+} );
+
+document.addEventListener('keyup', (event)=>{
+    console.log(event);
+    for(let i = 0; i < contentItem.length; ++i){
+        if(event.key.toUpperCase() === contentItemBackground2[i].innerHTML){
+            funcKeyDown(i);
+        }
+        if(event.code === "Space" && contentItemBackground2[i].classList.contains('space')){
+            funcKeyDown(i);
+        }
+        if(event.code === "Backspace" && contentItemBackground2[i].classList.contains('Backspace')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ShiftLeft" && contentItemBackground2[i].classList.contains('ShiftLeft')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ShiftRight" && contentItemBackground2[i].classList.contains('ShiftRight')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ControlLeft" && contentItemBackground2[i].classList.contains('ControlLeft')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ControlRight" && contentItemBackground2[i].classList.contains('ControlRight')){
+            funcKeyDown(i);
+        }
+        if(event.key === "CapsLock" && contentItemBackground2[i].classList.contains('CapsLock')){
+            funcKeyDown(i);
+        }
+        if(event.key === "Enter" && contentItemBackground2[i].classList.contains('Enter')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ArrowRight" && contentItemBackground2[i].classList.contains('ArrowRight')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ArrowUp" && contentItemBackground2[i].classList.contains('ArrowUp')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ArrowLeft" && contentItemBackground2[i].classList.contains('ArrowLeft')){
+            funcKeyDown(i);
+        }
+        if(event.code === "ArrowDown" && contentItemBackground2[i].classList.contains('ArrowDown')){
+            funcKeyDown(i);
+        }
+    }
+} );
+
+document.querySelector('.reset').addEventListener('click', ()=>{
+    location.reload();
+});
