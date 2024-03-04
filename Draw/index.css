@@ -1,0 +1,67 @@
+
+
+.backGround {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.squareCell{
+    width: 15px;
+    height: 15px;
+    background-color: #00000061;
+}
+
+.tool{
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    display: flex;
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+
+.tool__choose{
+    all: unset;
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    border: 2px solid #000;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.7;
+    font-weight: 1000;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.tool__choose:hover{
+    opacity: 1;
+}
+
+.blackColor{
+    background-color: black;
+    color: white;
+}
+
+.redColor{
+    background-color: red;
+}
+
+.greenColor{
+    background-color: green;
+}
+
+.yellowColor{
+    background-color: yellow;
+}
+
+.rainbowColor{
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    color: black;
+}
