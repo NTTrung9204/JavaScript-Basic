@@ -1,5 +1,7 @@
-const Box = document.querySelector('.box');
-const Area = document.querySelector('.area');
+const Box = document.getElementsByClassName('box');
+const Area = document.getElementsByClassName('area');
+
+console.log(Box);
 
 function moveInContainer(element, container) {
     const rect = container.getBoundingClientRect();
@@ -29,26 +31,35 @@ var isClicked = false;
 
 document.addEventListener('mouseup', function(e) {
     isClicked = false;
-    if (isContainer(Area, e.clientX, e.clientY)) {
-        Box.style.transition = 'all 0.3s';
-        moveInContainer(Box, Area);
-    }
+    Array.from(Area).forEach(area => {
+        if (isContainer(area, e.clientX, e.clientY)) {
+            e.target.style.transition = 'all 0.3s';
+            moveInContainer(e.target, area);
+        }
+    });
 });
 
-Box.addEventListener('mousedown', function() {
-    isClicked = true;
-    Box.style.transition = 'all 0.0s';
+Array.from(Box).forEach(element => {
+    element.addEventListener('mousedown', function() {
+        isClicked = true;
+        console.log(isClicked);
+        element.style.transition = 'all 0.0s';
+    });
+
+    element.addEventListener('mousemove', function(event) {
+        console.log(isClicked);
+        if (isClicked) {
+            event.target.style.left = event.clientX + 'px';
+            event.target.style.top = event.clientY + 'px';
+            Array.from(Area).forEach(area => {
+                if (isContainer(area, event.clientX, event.clientY)) {
+                    area.style.backgroundColor = 'lightgreen';
+                }
+                else {
+                    area.style.backgroundColor = 'unset';
+                }
+            });
+        }
+    });
 });
 
-Box.addEventListener('mousemove', function(event) {
-    if (isClicked) {
-        Box.style.left = event.clientX + 'px';
-        Box.style.top = event.clientY + 'px';
-        if (isContainer(Area, event.clientX, event.clientY)) {
-            Area.style.backgroundColor = 'lightgreen';
-        }
-        else {
-            Area.style.backgroundColor = 'unset';
-        }
-    }
-});
