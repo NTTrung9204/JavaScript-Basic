@@ -1,12 +1,13 @@
-const Box = document.getElementsByClassName('box');
+// const Box = document.getElementsByClassName('box');
 const Area = document.getElementsByClassName('area');
+const img = document.getElementsByClassName('img');
 
-console.log(Box);
+
 
 function moveInContainer(element, container) {
     const rect = container.getBoundingClientRect();
-    element.style.left = rect.left + rect.width / 2 + 'px';
-    element.style.top = rect.top + rect.height / 2 + 'px';
+    element.style.left = rect.left + rect.width / 2 - element.offsetWidth * 0.35 + 'px';
+    element.style.top = rect.top + rect.height / 2 - element.offsetHeight * 0.5 + 'px';
 }
 
 function getCenterElement(element) {
@@ -39,18 +40,23 @@ document.addEventListener('mouseup', function(e) {
     });
 });
 
-Array.from(Box).forEach(element => {
-    element.addEventListener('mousedown', function() {
+Array.from(img).forEach(element => {
+    var positionPointer = {
+        x: 0,
+        y: 0
+    };
+    element.addEventListener('mousedown', function(event) {
         isClicked = true;
-        console.log(isClicked);
         element.style.transition = 'all 0.0s';
+        positionPointer.x = event.clientX - element.getBoundingClientRect().left,
+        positionPointer.y = event.clientY - element.getBoundingClientRect().top
+
     });
 
     element.addEventListener('mousemove', function(event) {
-        console.log(isClicked);
         if (isClicked) {
-            event.target.style.left = event.clientX + 'px';
-            event.target.style.top = event.clientY + 'px';
+            event.target.style.left = event.clientX - positionPointer.x + 'px';
+            event.target.style.top = event.clientY - positionPointer.y + 'px';
             Array.from(Area).forEach(area => {
                 if (isContainer(area, event.clientX, event.clientY)) {
                     area.style.backgroundColor = 'lightgreen';

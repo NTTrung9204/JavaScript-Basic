@@ -4,6 +4,7 @@
     left: 0;
     bottom: 0;
     right: 0;
+    overflow: hidden;
 }
 
 .allBox{
@@ -55,4 +56,17 @@
     border: 2px dashed black;
     transition: all 0.3s;
     right: 100px;
+}
+
+img{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    /* transform: translate(-40%, -30%); */
+    /* transform: scale(2,); */
+    left: 0;
+    top: 0;
+    z-index: 10;
+    clip-path: polygon(30% 40%, 40% 40%, 40% 60%, 30% 60%);
 }
